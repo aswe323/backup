@@ -1,0 +1,7 @@
+class monster:
+    def __init__(self, health, discription):
+            self.discription = discription
+            self.health = health
+            if self.health == 0:
+                discription =+ " - its dead too"
+    
