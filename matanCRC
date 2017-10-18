@@ -1,0 +1,25 @@
+import os
+import time
+
+class customer:
+    "customer details and contact information, contact log"
+    def __init__(self,name, email, phone, nextContact, package):
+
+        #custmmer name and last name
+        self.name = name
+
+        #customer email of contact
+        self.email = email
+
+        #customer mobile phone number
+        self.phone = phone
+        
+        #next date contact this customer
+        self.nextContact = nextContact
+
+        #package the customer is paying for
+        self.package = package
+
+        self.log = []
+    #date of submission of the customer to the system
+    logDate = time.asctime(time.localtime(time.time()))
