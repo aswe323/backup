@@ -23,3 +23,14 @@ class customer:
         self.log = []
     #date of submission of the customer to the system
     logDate = time.asctime(time.localtime(time.time()))
+
+    #setting path to current working directory
+    customerFile = os.getcwd() + "/Customers.txt"
+
+    #creating a variable that access the file in write mod
+    writingCustmer = open(customerFile,"w")
+
+    #saving the customer details to the file
+    writingCustmer.write(name)
+
+    
