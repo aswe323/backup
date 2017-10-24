@@ -23,7 +23,7 @@ def createCustomer():
     if saveThis == "y":
 
             #setting path to current working directory
-            customerFile = os.getcwd() + "Customers.obj"
+            customerFile = os.getcwd() + naming + ".obj"
 
             #creating a variable that access the file in write mod
             writingCustmer = open(customerFile,"wb")
@@ -40,13 +40,34 @@ def createCustomer():
 
 
 #retriving and object and showing its contests in a readble format.
-def showCustomer():
-    #TODO
+def showCustomer(NameSearch):
 
- return
+    #setting up th e path to the file in a veriabe
+    customerFile = os.getcwd() + NameSearch + ".obj"
+
+    #a veriable that acess the file in read mod with binery 
+    reading = open(customerFile, "rb")
+
+    #loading the file with pickle
+    current = pickle.load(reading)
+
+    #printing the customer attrabuts
+    print(
+"""name:%s
+phone:%s
+email:%s
+next date to contact the customer:%s"""%(current.name, current.phone, current.email, current.nextContact))
+
+    return
+
+
 
 
 #customer class takes the customer details and logs the date of creation of the object. an empty log exists in the form of a lists veriable with no enterys
+#has function of LogNew that saces an enetry date and a stractured text(string) enetery followed by a customized note
+
+
+
 class customer:
     "customer details and contact information, contact log"
     def __init__(self,name, email, phone, nextContact):
@@ -67,6 +88,15 @@ class customer:
     #date of submission of the customer to the system
     logDate = time.asctime(time.localtime(time.time()))
 
+
+    #log is a dictionery with the date:string format
+    log = {logDate:"i was created"}
+    #NewLog method for creating a new log in the log variable 
+    def newLog(self):
+        
+        return
+        
+        
 
 
     
