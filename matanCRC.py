@@ -64,9 +64,9 @@ next date to contact the customer:%s"""%(current.name, current.phone, current.em
 
 
 #customer class takes the customer details and logs the date of creation of the object. an empty log exists in the form of a lists veriable with no enterys
-#has function of LogNew that saces an enetry date and a stractured text(string) enetery followed by a customized note
+#has function of LogNew that saves an enetry date and a stractured text(string)enetery followed by a customized note
 
-
+#a methid that uses time.strftime(Y%-m%-d%) that compares the due date with the current date and adds the ustomer to a list in the main menu
 
 class customer:
     "customer details and contact information, contact log"
@@ -94,6 +94,7 @@ class customer:
     #NewLog method for creating a new log in the log variable 
     def newLog(self):
         
+        newlog[logDate :s]
         return
         
         
